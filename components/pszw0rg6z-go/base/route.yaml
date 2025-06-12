@@ -1,0 +1,18 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: pszw0rg6z-go
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: pszw0rg6z-go 
+  name: pszw0rg6z-go
+spec:
+  port:
+    targetPort: 8081 
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: pszw0rg6z-go
+    weight: 100 
